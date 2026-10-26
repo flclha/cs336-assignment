@@ -1,0 +1,154 @@
+[
+  {
+    "test": "naive",
+    "status": "PASS",
+    "steps": 5,
+    "max_abs_weight_error": 4.079192876815796e-07,
+    "step_errors": [
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07
+    ],
+    "allreduce_calls_per_step": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "backend": "gloo",
+    "world_size": 2,
+    "global_batch": 32,
+    "local_batch": 16,
+    "model": "existing notebook SimpleNet(784,50,10)",
+    "optimizer": "AdamW"
+  },
+  {
+    "test": "flat",
+    "status": "PASS",
+    "steps": 5,
+    "max_abs_weight_error": 4.079192876815796e-07,
+    "step_errors": [
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07
+    ],
+    "allreduce_calls_per_step": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "backend": "gloo",
+    "world_size": 2,
+    "global_batch": 32,
+    "local_batch": 16,
+    "model": "existing notebook SimpleNet(784,50,10)",
+    "optimizer": "AdamW"
+  },
+  {
+    "test": "individual",
+    "status": "PASS",
+    "steps": 5,
+    "max_abs_weight_error": 4.079192876815796e-07,
+    "step_errors": [
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07
+    ],
+    "allreduce_calls_per_step": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "backend": "gloo",
+    "world_size": 2,
+    "global_batch": 32,
+    "local_batch": 16,
+    "model": "existing notebook SimpleNet(784,50,10)",
+    "optimizer": "AdamW"
+  },
+  {
+    "test": "bucket_0.001",
+    "status": "PASS",
+    "steps": 5,
+    "max_abs_weight_error": 4.079192876815796e-07,
+    "step_errors": [
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07
+    ],
+    "allreduce_calls_per_step": [
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "backend": "gloo",
+    "world_size": 2,
+    "global_batch": 32,
+    "local_batch": 16,
+    "model": "existing notebook SimpleNet(784,50,10)",
+    "optimizer": "AdamW"
+  },
+  {
+    "test": "bucket_1",
+    "status": "PASS",
+    "steps": 5,
+    "max_abs_weight_error": 4.079192876815796e-07,
+    "step_errors": [
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07,
+      4.079192876815796e-07
+    ],
+    "allreduce_calls_per_step": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "backend": "gloo",
+    "world_size": 2,
+    "global_batch": 32,
+    "local_batch": 16,
+    "model": "existing notebook SimpleNet(784,50,10)",
+    "optimizer": "AdamW"
+  },
+  {
+    "test": "sharded_dynamic_AdamW",
+    "status": "PASS",
+    "steps": 6,
+    "max_abs_weight_error": 0,
+    "state_bytes_per_rank": [
+      44,
+      88
+    ],
+    "tested": "add_param_group preserves state; lr changes; closure once; parameter sync"
+  },
+  {
+    "test": "sharded_dynamic_SGD",
+    "status": "PASS",
+    "steps": 6,
+    "max_abs_weight_error": 0,
+    "state_bytes_per_rank": [
+      0,
+      0
+    ],
+    "tested": "add_param_group preserves state; lr changes; closure once; parameter sync"
+  }
+]

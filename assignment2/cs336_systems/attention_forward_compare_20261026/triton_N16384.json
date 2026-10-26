@@ -1,0 +1,28 @@
+{
+  "implementation": "triton",
+  "N": 16384,
+  "B": 1,
+  "d": 64,
+  "dtype": "float32",
+  "causal": false,
+  "requires_grad": false,
+  "tf32": false,
+  "warmups": 1,
+  "trials": 3,
+  "seed": 42,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.9.1+cu128",
+  "status": "OK",
+  "mean_ms": 22.920659015653655,
+  "std_ms": 0.033194901537546,
+  "samples_ms": [
+    22.957908018724993,
+    22.90986300795339,
+    22.89420602028258
+  ],
+  "baseline_MiB": 20.125,
+  "peak_allocated_MiB": 24.1875,
+  "extra_peak_MiB": 4.0625,
+  "checked_query_rows": 64,
+  "max_abs_error": 7.450580596923828e-08
+}

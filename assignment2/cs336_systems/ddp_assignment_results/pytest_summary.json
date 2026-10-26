@@ -1,0 +1,32 @@
+[
+  {
+    "repeat": 1,
+    "returncode": 0,
+    "elapsed_s": 48.1122916599852,
+    "summary": "10 passed in 45.32s"
+  },
+  {
+    "repeat": 2,
+    "returncode": 0,
+    "elapsed_s": 41.56751854499453,
+    "summary": "10 passed in 38.98s"
+  },
+  {
+    "repeat": 3,
+    "returncode": 0,
+    "elapsed_s": 43.208942469005706,
+    "summary": "10 passed in 40.61s"
+  },
+  {
+    "repeat": 4,
+    "returncode": 0,
+    "elapsed_s": 43.540467407990946,
+    "summary": "10 passed in 40.98s"
+  },
+  {
+    "repeat": 5,
+    "returncode": 0,
+    "elapsed_s": 41.655898869008524,
+    "summary": "10 passed in 39.08s"
+  }
+]

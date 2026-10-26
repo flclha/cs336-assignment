@@ -210,7 +210,7 @@ def main():
 
     for size in [1,10,100,1000]:
         for Backend in ["gloo", "nccl"]:
-            for world_size in [1]:
+            for world_size in [1]:# 有多少个GPU就增加测试用例，当然一个也能跑
                 parser = argparse.ArgumentParser("All-Reduce Benchmark")
 
                 parser.add_argument("--world_size", type=int, default=world_size,

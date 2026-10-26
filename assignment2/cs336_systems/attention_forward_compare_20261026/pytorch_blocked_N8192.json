@@ -1,0 +1,28 @@
+{
+  "implementation": "pytorch_blocked",
+  "N": 8192,
+  "B": 1,
+  "d": 64,
+  "dtype": "float32",
+  "causal": false,
+  "requires_grad": false,
+  "tf32": false,
+  "warmups": 1,
+  "trials": 3,
+  "seed": 42,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.9.1+cu128",
+  "status": "OK",
+  "mean_ms": 5118.118869994457,
+  "std_ms": 15.80173985349367,
+  "samples_ms": [
+    5100.000079983147,
+    5125.313575001201,
+    5129.042954999022
+  ],
+  "baseline_MiB": 14.125,
+  "peak_allocated_MiB": 16.2685546875,
+  "extra_peak_MiB": 2.1435546875,
+  "checked_query_rows": 64,
+  "max_abs_error": 5.21540641784668e-08
+}

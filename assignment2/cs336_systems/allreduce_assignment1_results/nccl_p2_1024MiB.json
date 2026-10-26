@@ -1,0 +1,7 @@
+{
+  "status": "UNAVAILABLE",
+  "backend": "nccl",
+  "world_size": 2,
+  "size_MiB": 1024,
+  "reason": "Needs 2 distinct GPUs; only 1 available"
+}

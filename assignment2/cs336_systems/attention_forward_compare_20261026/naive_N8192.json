@@ -1,0 +1,28 @@
+{
+  "implementation": "naive",
+  "N": 8192,
+  "B": 1,
+  "d": 64,
+  "dtype": "float32",
+  "causal": false,
+  "requires_grad": false,
+  "tf32": false,
+  "warmups": 1,
+  "trials": 3,
+  "seed": 42,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.9.1+cu128",
+  "status": "OK",
+  "mean_ms": 2.377745317062363,
+  "std_ms": 0.025581786147848434,
+  "samples_ms": [
+    2.4067599733825773,
+    2.3680379963479936,
+    2.358437981456518
+  ],
+  "baseline_MiB": 14.125,
+  "peak_allocated_MiB": 528.125,
+  "extra_peak_MiB": 514.0,
+  "checked_query_rows": 64,
+  "max_abs_error": 4.0978193283081055e-08
+}

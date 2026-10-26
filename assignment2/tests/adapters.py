@@ -1,5 +1,10 @@
 from __future__ import annotations
 
+# DDP assignment module path
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'cs336_systems'))
+
 from typing import Type
 
 import torch
@@ -45,7 +50,8 @@ def get_ddp_individual_parameters(module: torch.nn.Module) -> torch.nn.Module:
         DDP类的实例。
     """
     # 例如: return DDPIndividualParameters(module)
-    raise NotImplementedError
+    from ddp_assignment_solutions import IndividualDDP
+    return IndividualDDP(module)
 
 
 def ddp_individual_parameters_on_after_backward(ddp_model: torch.nn.Module, optimizer: torch.optim.Optimizer):
@@ -59,7 +65,7 @@ def ddp_individual_parameters_on_after_backward(ddp_model: torch.nn.Module, opti
             与DDP包装模型一起使用的优化器。
     """
     # 例如: ddp_model.finish_gradient_synchronization()
-    raise NotImplementedError
+    ddp_model.finish_gradient_synchronization()
 
 
 def get_ddp_bucketed(module: torch.nn.Module, bucket_size_mb: float) -> torch.nn.Module:
@@ -75,7 +81,8 @@ def get_ddp_bucketed(module: torch.nn.Module, bucket_size_mb: float) -> torch.nn
     Returns:
         DDP类的实例。
     """
-    raise NotImplementedError
+    from ddp_assignment_solutions import BucketedDDP
+    return BucketedDDP(module, bucket_size_mb)
 
 
 def ddp_bucketed_on_after_backward(ddp_model: torch.nn.Module, optimizer: torch.optim.Optimizer):
@@ -89,7 +96,7 @@ def ddp_bucketed_on_after_backward(ddp_model: torch.nn.Module, optimizer: torch.
             与DDP包装模型一起使用的优化器。
     """
     # 例如: ddp_model.finish_gradient_synchronization()
-    raise NotImplementedError
+    ddp_model.finish_gradient_synchronization()
 
 
 def ddp_bucketed_on_train_batch_start(ddp_model: torch.nn.Module, optimizer: torch.optim.Optimizer):
@@ -102,7 +109,7 @@ def ddp_bucketed_on_train_batch_start(ddp_model: torch.nn.Module, optimizer: tor
         optimizer: torch.optim.Optimizer
             与DDP包装模型一起使用的优化器。
     """
-    raise NotImplementedError
+    pass  # State reset occurs in forward().
 
 
 def get_sharded_optimizer(params, optimizer_cls: Type[torch.optim.Optimizer], **kwargs) -> torch.optim.Optimizer:
@@ -119,4 +126,5 @@ def get_sharded_optimizer(params, optimizer_cls: Type[torch.optim.Optimizer], **
     Returns:
         分片优化器的实例。
     """
-    raise NotImplementedError
+    from ddp_assignment_solutions import ShardedOptimizer
+    return ShardedOptimizer(params, optimizer_cls, **kwargs)

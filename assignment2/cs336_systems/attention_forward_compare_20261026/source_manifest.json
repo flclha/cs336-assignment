@@ -1,0 +1,5 @@
+{
+  "notebook": "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/\u4f5c\u4e1a1.ipynb",
+  "notebook_sha256": "06cfbef290953e04fbdb8116d4e8bc8a3988457227bcedafe6ff10272f10bf35",
+  "adjustment": "Triton forward dot precision explicitly ieee; original tile sizes preserved"
+}

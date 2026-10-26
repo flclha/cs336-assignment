@@ -1,0 +1,58 @@
+{
+  "status": "OK",
+  "backend": "gloo",
+  "device": "cpu",
+  "world_size": 6,
+  "size_MiB": 10,
+  "bytes_per_rank": 10485760,
+  "dtype": "float32",
+  "warmups": 5,
+  "iterations": 20,
+  "mean_ms": 20.393755749682896,
+  "rank_mean_ms": [
+    20.392478400026448,
+    20.38890180119779,
+    20.391099349944852,
+    20.39107134914957,
+    20.388838500366546,
+    20.393755749682896
+  ],
+  "rank_mean_spread_ms": 0.004917249316349626,
+  "algorithm_GB_s": 0.5141652243316214,
+  "correctness": "full tensor SUM verified",
+  "ranks": [
+    {
+      "rank": 0,
+      "elapsed_s": 0.40784956800052896,
+      "mean_ms": 20.392478400026448
+    },
+    {
+      "rank": 1,
+      "elapsed_s": 0.4077780360239558,
+      "mean_ms": 20.38890180119779
+    },
+    {
+      "rank": 2,
+      "elapsed_s": 0.40782198699889705,
+      "mean_ms": 20.391099349944852
+    },
+    {
+      "rank": 3,
+      "elapsed_s": 0.4078214269829914,
+      "mean_ms": 20.39107134914957
+    },
+    {
+      "rank": 4,
+      "elapsed_s": 0.4077767700073309,
+      "mean_ms": 20.388838500366546
+    },
+    {
+      "rank": 5,
+      "elapsed_s": 0.4078751149936579,
+      "mean_ms": 20.393755749682896
+    }
+  ],
+  "torch": "2.9.1+cu128",
+  "cpu_threads_per_rank": 1,
+  "case_wall_s": 5.931042141019134
+}
