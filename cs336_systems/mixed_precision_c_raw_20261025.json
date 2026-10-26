@@ -1,0 +1,704 @@
+[
+  {
+    "size": "small",
+    "precision": "fp32",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OK",
+    "samples": [
+      {
+        "forward_ms": 39.44864799268544,
+        "backward_ms": 44.237779002287425,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 37.997531006112695,
+        "backward_ms": 43.67679399729241,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 38.672401002258994,
+        "backward_ms": 44.24281699175481,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 37.87463599292096,
+        "backward_ms": 43.454072991153225,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 37.55678900051862,
+        "backward_ms": 43.4822810057085,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 38.587969000218436,
+        "backward_ms": 43.356501002563164,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 38.36524399230257,
+        "backward_ms": 43.366772995796055,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 38.50645700003952,
+        "backward_ms": 43.21602999698371,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 39.222692998009734,
+        "backward_ms": 43.21542498655617,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 39.077933004591614,
+        "backward_ms": 43.29260399390478,
+        "loss": 9.279921531677246,
+        "logits_dtype": "torch.float32"
+      }
+    ],
+    "forward_ms_mean": 38.53103009896586,
+    "forward_ms_std": 0.6087747089693569,
+    "backward_ms_mean": 43.554107696400024,
+    "backward_ms_std": 0.3863611268239531
+  },
+  {
+    "size": "small",
+    "precision": "bf16",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OK",
+    "samples": [
+      {
+        "forward_ms": 46.217843002523296,
+        "backward_ms": 51.10289900039788,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 46.59636499127373,
+        "backward_ms": 50.76403700513765,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 47.31284599984065,
+        "backward_ms": 51.3331910042325,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 46.858966001309454,
+        "backward_ms": 52.422481996472925,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 45.392896005068906,
+        "backward_ms": 51.081056997645646,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 44.89652600022964,
+        "backward_ms": 51.38544100918807,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 45.22662299859803,
+        "backward_ms": 50.093994999770075,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 44.65134799829684,
+        "backward_ms": 50.066510011674836,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 45.36649800138548,
+        "backward_ms": 50.146565001341514,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 44.761586003005505,
+        "backward_ms": 49.901439997483976,
+        "loss": 9.279296875,
+        "logits_dtype": "torch.bfloat16"
+      }
+    ],
+    "forward_ms_mean": 45.72814970015315,
+    "forward_ms_std": 0.9465531903248059,
+    "backward_ms_mean": 50.82976170233451,
+    "backward_ms_std": 0.7953682751570921
+  },
+  {
+    "size": "medium",
+    "precision": "fp32",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OK",
+    "samples": [
+      {
+        "forward_ms": 84.43085099861491,
+        "backward_ms": 93.84871399379335,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 84.81633198971394,
+        "backward_ms": 93.43273099511862,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 84.93962700595148,
+        "backward_ms": 93.6163000005763,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 84.20601100078784,
+        "backward_ms": 93.5462350025773,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 83.91163099440746,
+        "backward_ms": 94.70316400984302,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 84.34134900744539,
+        "backward_ms": 93.0855269980384,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 85.10290500998963,
+        "backward_ms": 93.79882999928668,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 84.16843200393487,
+        "backward_ms": 94.57431000191718,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 83.6713239987148,
+        "backward_ms": 93.38103199843317,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 84.00389899907168,
+        "backward_ms": 94.15482300391886,
+        "loss": 9.340741157531738,
+        "logits_dtype": "torch.float32"
+      }
+    ],
+    "forward_ms_mean": 84.3592361008632,
+    "forward_ms_std": 0.46714312874707853,
+    "backward_ms_mean": 93.81416660035029,
+    "backward_ms_std": 0.5228727071364209
+  },
+  {
+    "size": "medium",
+    "precision": "bf16",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OK",
+    "samples": [
+      {
+        "forward_ms": 95.10640699591022,
+        "backward_ms": 107.9167659918312,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 94.54279000055976,
+        "backward_ms": 108.14612999092788,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 95.16131000418682,
+        "backward_ms": 107.28080800618045,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 94.91607699601445,
+        "backward_ms": 106.2354960013181,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 94.47802198701538,
+        "backward_ms": 107.08254500059411,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 94.30014199460857,
+        "backward_ms": 108.43032400589436,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 96.0730969964061,
+        "backward_ms": 108.8047179946443,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 93.79781699681189,
+        "backward_ms": 106.22681799577549,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 93.75099699536804,
+        "backward_ms": 107.83530799380969,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 94.71966000273824,
+        "backward_ms": 106.78052299772389,
+        "loss": 9.34124755859375,
+        "logits_dtype": "torch.bfloat16"
+      }
+    ],
+    "forward_ms_mean": 94.68463189696195,
+    "forward_ms_std": 0.6877095193080094,
+    "backward_ms_mean": 107.47394359786995,
+    "backward_ms_std": 0.8959498677976712
+  },
+  {
+    "size": "large",
+    "precision": "fp32",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OK",
+    "samples": [
+      {
+        "forward_ms": 126.16676600009669,
+        "backward_ms": 144.51993099646643,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 125.11169399658684,
+        "backward_ms": 144.81710799736902,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 126.19736199849285,
+        "backward_ms": 144.51165200443938,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 124.94353200600017,
+        "backward_ms": 144.46970900462475,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 124.89618499239441,
+        "backward_ms": 144.60088999476284,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 123.6218920093961,
+        "backward_ms": 145.10562299983576,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 125.04482601070777,
+        "backward_ms": 145.32949900603853,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 124.61502599762753,
+        "backward_ms": 145.4916590009816,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 124.31921600364149,
+        "backward_ms": 145.39876600611024,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 124.83889400027692,
+        "backward_ms": 145.4085900040809,
+        "loss": 9.315583229064941,
+        "logits_dtype": "torch.float32"
+      }
+    ],
+    "forward_ms_mean": 124.97553930152208,
+    "forward_ms_std": 0.7713116617590662,
+    "backward_ms_mean": 144.96534270147095,
+    "backward_ms_std": 0.4240414098720097
+  },
+  {
+    "size": "large",
+    "precision": "bf16",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OK",
+    "samples": [
+      {
+        "forward_ms": 138.30885099014267,
+        "backward_ms": 156.85872100584675,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 137.5268980045803,
+        "backward_ms": 152.53960600239225,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 137.36397698812652,
+        "backward_ms": 155.86175098724198,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 137.0896640000865,
+        "backward_ms": 154.5459619956091,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 140.7111089938553,
+        "backward_ms": 155.76332299679052,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 139.77350200002547,
+        "backward_ms": 155.93077799712773,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 137.7319220046047,
+        "backward_ms": 155.29372300079558,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 138.9400019979803,
+        "backward_ms": 157.15765800268855,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 138.36796100076754,
+        "backward_ms": 153.74679799424484,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 139.19881600304507,
+        "backward_ms": 166.22185800224543,
+        "loss": 9.31451416015625,
+        "logits_dtype": "torch.bfloat16"
+      }
+    ],
+    "forward_ms_mean": 138.50127019832144,
+    "forward_ms_std": 1.1577362593068146,
+    "backward_ms_mean": 156.39201779849827,
+    "backward_ms_std": 3.723370566600485
+  },
+  {
+    "size": "xl",
+    "precision": "fp32",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OK",
+    "samples": [
+      {
+        "forward_ms": 170.19971599802375,
+        "backward_ms": 305.59069399896543,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 170.53488500823732,
+        "backward_ms": 307.36826700740494,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 168.39911800343543,
+        "backward_ms": 306.4570600108709,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 169.6543370053405,
+        "backward_ms": 306.79023399716243,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 168.75195999455173,
+        "backward_ms": 306.8841429922031,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 168.3150070020929,
+        "backward_ms": 307.149501008098,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 168.67808099777903,
+        "backward_ms": 307.80136499379296,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 169.70022401073948,
+        "backward_ms": 306.87529299757443,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 170.4617089999374,
+        "backward_ms": 308.05690700071864,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      },
+      {
+        "forward_ms": 169.00290599733125,
+        "backward_ms": 307.69202500232495,
+        "loss": 9.349703788757324,
+        "logits_dtype": "torch.float32"
+      }
+    ],
+    "forward_ms_mean": 169.36979430174688,
+    "forward_ms_std": 0.8484112410031551,
+    "backward_ms_mean": 307.0665489009116,
+    "backward_ms_std": 0.7230893704047633
+  },
+  {
+    "size": "xl",
+    "precision": "bf16",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OK",
+    "samples": [
+      {
+        "forward_ms": 186.65057698672172,
+        "backward_ms": 231.81855599978007,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 185.29538199072704,
+        "backward_ms": 230.79957900336012,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 187.1471900085453,
+        "backward_ms": 232.50698299671058,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 186.12326800939627,
+        "backward_ms": 232.3844740021741,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 183.63721399509814,
+        "backward_ms": 231.8681460019434,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 186.41312900581397,
+        "backward_ms": 232.11563000222668,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 184.30024600820616,
+        "backward_ms": 231.64633598935325,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 196.39450599788688,
+        "backward_ms": 237.94262199953664,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 187.21659599395934,
+        "backward_ms": 231.35874699801207,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      },
+      {
+        "forward_ms": 184.61752901203,
+        "backward_ms": 231.86536099819932,
+        "loss": 9.34991455078125,
+        "logits_dtype": "torch.bfloat16"
+      }
+    ],
+    "forward_ms_mean": 186.77956370083848,
+    "forward_ms_std": 3.5940300025654826,
+    "backward_ms_mean": 232.43064339912962,
+    "backward_ms_std": 1.9978925132064769
+  },
+  {
+    "size": "2.7B",
+    "precision": "fp32",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OOM",
+    "failed_stage": "backward",
+    "error": "CUDA out of memory. Tried to allocate 100.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 121.88 MiB is free. Process 1903 has 260.00 MiB memory in use. Including non-PyTorch memory, this process has 22.74 GiB memory in use. Of the allocated memory 22.26 GiB is allocated by PyTorch, and 177.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+  },
+  {
+    "size": "2.7B",
+    "precision": "bf16",
+    "warmups": 5,
+    "trials": 10,
+    "context_length": 128,
+    "batch_size": 4,
+    "vocab_size": 10000,
+    "seed": 42,
+    "parameter_dtype": "float32",
+    "tf32": false,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "torch": "2.9.1+cu128",
+    "python": "3.12.15",
+    "cuda": "12.8",
+    "status": "OOM",
+    "failed_stage": "forward",
+    "error": "CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 75.88 MiB is free. Process 1903 has 260.00 MiB memory in use. Including non-PyTorch memory, this process has 22.79 GiB memory in use. Of the allocated memory 22.37 GiB is allocated by PyTorch, and 106.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "configuration": "large_ctx512_inference_fp32_batch1",
+  "baseline_MiB": 3814.2705078125,
+  "peak_allocated_MiB": 3907.0673828125,
+  "peak_reserved_MiB": 3990.0,
+  "extra_above_baseline_MiB": 92.796875,
+  "snapshot": "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_snapshots_assignment4/large_ctx512_inference_fp32_batch1.pickle",
+  "stage_end_memory": {
+    "after_forward_MiB": 3834.2705078125
+  },
+  "mode": "inference",
+  "size": "large",
+  "context": 512,
+  "batch": 1,
+  "parameter_dtype": "float32",
+  "replacement_for": "2.7B",
+  "residual_activation_MiB": 2.5
+}

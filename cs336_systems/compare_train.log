@@ -1,0 +1,46 @@
+
+SETTINGS {"size": "small", "context": 128, "mode": "train", "tool": "torch", "warmups": 5, "steps": 10, "trace": null}
+GPU NVIDIA GeForce RTX 3090 PyTorch 2.9.1+cu128
+Validated attention output AND gradients against original implementation.
+FP32, TF32 off, batch=4, vocab=10000; stage-end CUDA synchronization.
+Python forward wall time: 84.0466 +/- 0.6549 ms/step (under selected tool)
+
+(a) Operator-attributed GPU time, per step (not CPU wall time):
+All attributed GPU time: 55.4312 ms
+GEMM leaf operators: 22.9017 ms; share=41.32%
+GEMM classification: ['aten::addmm', 'aten::baddbmm', 'aten::bmm', 'aten::mm']
+These are PyTorch operator-attributed times; use Nsight kernel summary for kernel-level confirmation.
+
+(b) Forward attention regions, summed over ALL layers, ms/step:
+attention_total: 1.0166
+attention_qk: 0.1608
+attention_scale: 0.0804
+attention_mask: 0.0953
+attention_softmax: 0.3724
+attention_pv: 0.3078
+QK+PV GPU-time / softmax GPU-time: 1.259
+
+Top CPU operators by self-attributed GPU time (ms/step):
+aten::bmm: 22.9017
+aten::mul: 11.2025
+aten::add: 5.1399
+aten::sub_: 3.5346
+aten::copy_: 2.6324
+aten::div: 2.4701
+aten::pow: 1.4591
+aten::fill_: 1.3821
+aten::sqrt: 1.2889
+aten::add_: 0.8353
+aten::sum: 0.6209
+aten::cat: 0.2951
+aten::sigmoid_backward: 0.2843
+aten::neg: 0.2209
+aten::sigmoid: 0.1751
+
+Forward attention operation counts, all layers per step:
+QK+PV FLOPs (multiply+add=2): 2,415,919,104
+Stable softmax approximate operations: 47,038,464
+Matmul FLOPs / softmax approximate ops: 51.361
+Softmax convention counts exp/comparison as 1 op; not equivalent-cost arithmetic FLOPs.
+Exclude mask/scaling from QK+PV counts; full matrices are computed despite causal mask.
+Do not add attention_total to its nested region times (double counting).

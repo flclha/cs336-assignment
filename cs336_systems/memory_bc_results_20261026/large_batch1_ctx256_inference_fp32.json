@@ -1,0 +1,25 @@
+{
+  "configuration": "large_batch1_ctx256_inference_fp32",
+  "baseline_MiB": 3814.2041015625,
+  "peak_allocated_MiB": 3840.5400390625,
+  "peak_reserved_MiB": 3912.0,
+  "extra_above_baseline_MiB": 26.3359375,
+  "snapshot": "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_bc_results_20261026/large_batch1_ctx256_inference_fp32.pickle",
+  "stage_end_memory": {
+    "after_forward_MiB": 3823.9697265625
+  },
+  "size": "large",
+  "batch": 1,
+  "context": 256,
+  "mode": "inference",
+  "precision": "fp32",
+  "warmups": 1,
+  "measured_steps": 1,
+  "parameter_dtype": "float32",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "allocator": "expandable_segments:True",
+  "logits_dtype": "torch.float32",
+  "status": "OK"
+}

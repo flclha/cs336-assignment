@@ -1,0 +1,56 @@
+
+SETTINGS {"size": "small", "context": 128, "mode": "inference", "tool": "torch", "warmups": 1, "steps": 2, "trace": null}
+GPU NVIDIA GeForce RTX 3090 PyTorch 2.9.1+cu128
+Validated attention output AND gradients against original implementation.
+FP32, TF32 off, batch=4, vocab=10000; stage-end CUDA synchronization.
+Python forward wall time: 78.9350 +/- 0.2338 ms/step (under selected tool)
+
+(a) Operator-attributed GPU time, per step (not CPU wall time):
+All attributed GPU time: 10.6967 ms
+GEMM leaf operators: 8.0469 ms; share=75.23%
+GEMM classification: ['aten::addmm', 'aten::baddbmm', 'aten::bmm', 'aten::mm']
+These are PyTorch operator-attributed times; use Nsight kernel summary for kernel-level confirmation.
+
+(b) Forward attention regions, summed over ALL layers, ms/step:
+attention_total: 0.9773
+attention_qk: 0.1550
+attention_scale: 0.0804
+attention_mask: 0.0887
+attention_softmax: 0.3558
+attention_pv: 0.2974
+QK+PV GPU-time / softmax GPU-time: 1.272
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                forward         0.00%       0.000us         0.00%       0.000us       0.000us     157.506ms       736.50%     157.506ms      78.753ms             2  
+                                              aten::bmm         5.80%       9.316ms         9.05%      14.530ms      66.650us      16.094ms        75.25%      16.094ms      73.825us           218  
+                                 ampere_sgemm_128x64_tn         0.00%       0.000us         0.00%       0.000us       0.000us      10.096ms        47.21%      10.096ms     136.434us            74  
+                                 ampere_sgemm_32x128_tn         0.00%       0.000us         0.00%       0.000us       0.000us       5.144ms        24.05%       5.144ms      53.585us            96  
+                                      attention_softmax         0.00%       0.000us         0.00%       0.000us       0.000us       4.547ms        21.26%       4.547ms     189.475us            24  
+                                              aten::mul         4.01%       6.438ms         6.44%      10.338ms      30.407us       2.201ms        10.29%       2.201ms       6.473us           340  
+                                           attention_pv         0.00%       0.000us         0.00%       0.000us       0.000us       1.991ms         9.31%       1.991ms      82.967us            24  
+                                         attention_mask         0.00%       0.000us         0.00%       0.000us       0.000us       1.456ms         6.81%       1.456ms      60.647us            24  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us       1.102ms         5.15%       1.102ms       3.774us           292  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us       1.099ms         5.14%       1.099ms      22.898us            48  
+void at::native::elementwise_kernel<128, 2, at::nati...         0.00%       0.000us         0.00%       0.000us       0.000us     546.631us         2.56%     546.631us       3.796us           144  
+                                ampere_sgemm_128x128_nn         0.00%       0.000us         0.00%       0.000us       0.000us     455.397us         2.13%     455.397us      18.975us            24  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us     423.939us         1.98%     423.939us       2.944us           144  
+                                              aten::add         1.83%       2.942ms         2.95%       4.740ms      32.466us     378.979us         1.77%     378.979us       2.596us           146  
+                                          aten::sigmoid         0.32%     507.468us         0.54%     864.606us      36.025us     345.186us         1.61%     345.186us      14.383us            24  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us     345.186us         1.61%     345.186us      14.383us            24  
+                                              aten::div         0.75%       1.202ms         1.20%       1.923ms      40.056us     317.607us         1.49%     317.607us       6.617us            48  
+                                ampere_sgemm_128x128_tn         0.00%       0.000us         0.00%       0.000us       0.000us     310.084us         1.45%     310.084us      12.920us            24  
+                                           attention_qk         0.00%       0.000us         0.00%       0.000us       0.000us     310.084us         1.45%     310.084us      12.920us            24  
+                                              aten::cat         1.67%       2.688ms         3.20%       5.143ms     107.145us     309.795us         1.45%     309.795us       6.454us            48  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 160.606ms
+Self CUDA time total: 21.386ms
+
+
+Forward attention operation counts, all layers per step:
+QK+PV FLOPs (multiply+add=2): 2,415,919,104
+Stable softmax approximate operations: 47,038,464
+Matmul FLOPs / softmax approximate ops: 51.361
+Softmax convention counts exp/comparison as 1 op; not equivalent-cost arithmetic FLOPs.
+Exclude mask/scaling from QK+PV counts; full matrices are computed despite causal mask.
+Do not add attention_total to its nested region times (double counting).

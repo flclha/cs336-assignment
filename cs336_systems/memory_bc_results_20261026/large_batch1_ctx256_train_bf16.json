@@ -1,0 +1,27 @@
+{
+  "configuration": "large_batch1_ctx256_train_bf16",
+  "baseline_MiB": 11439.3544921875,
+  "peak_allocated_MiB": 15489.39111328125,
+  "peak_reserved_MiB": 17102.0,
+  "extra_above_baseline_MiB": 4050.03662109375,
+  "snapshot": "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_bc_results_20261026/large_batch1_ctx256_train_bf16.pickle",
+  "stage_end_memory": {
+    "after_forward_MiB": 14424.70703125,
+    "after_backward_MiB": 15245.25048828125,
+    "after_optimizer_MiB": 15240.25048828125
+  },
+  "size": "large",
+  "batch": 1,
+  "context": 256,
+  "mode": "train",
+  "precision": "bf16",
+  "warmups": 1,
+  "measured_steps": 1,
+  "parameter_dtype": "float32",
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "torch": "2.9.1+cu128",
+  "cuda": "12.8",
+  "allocator": "expandable_segments:True",
+  "logits_dtype": "torch.bfloat16",
+  "status": "OK"
+}

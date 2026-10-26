@@ -1,0 +1,10 @@
+2.9.1+cu128 NVIDIA GeForce RTX 3090
+工作目录: /home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems
+memory history接口: (enabled: Optional[str] = 'all', context: Optional[str] = 'all', stacks: str = 'all', max_entries: int = 9223372036854775807, device: 'Device' = None, clear_history: bool = False, compile_context: bool = False, global_record_annotations: bool = False)
+配置: large_ctx512_inference_fp32
+快照路径: /home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_snapshots_assignment4/large_ctx512_inference_fp32.pickle
+加载完成，已分配MiB: 3806.1689453125
+{'configuration': 'large_ctx512_inference_fp32', 'baseline_MiB': 3814.2939453125, 'peak_allocated_MiB': 4184.7080078125, 'peak_reserved_MiB': 4280.0, 'extra_above_baseline_MiB': 370.4140625, 'snapshot': '/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_snapshots_assignment4/large_ctx512_inference_fp32.pickle', 'stage_end_memory': {'after_forward_MiB': 3892.4189453125}}
+/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/run_memory_large_ad.py:124: FutureWarning: device argument is deprecated, plots now contain all device
+  html = trace_plot(snapshot, device=0)
+RESULT_JSON {"configuration": "large_ctx512_inference_fp32", "baseline_MiB": 3814.2939453125, "peak_allocated_MiB": 4184.7080078125, "peak_reserved_MiB": 4280.0, "extra_above_baseline_MiB": 370.4140625, "snapshot": "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_snapshots_assignment4/large_ctx512_inference_fp32.pickle", "stage_end_memory": {"after_forward_MiB": 3892.4189453125}, "mode": "inference", "size": "large", "context": 512, "batch": 4, "parameter_dtype": "float32", "replacement_for": "2.7B", "residual_activation_MiB": 10.0}

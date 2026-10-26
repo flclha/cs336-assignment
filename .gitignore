@@ -179,3 +179,23 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+
+# Assignment artifacts for GitHub backup
+# Keep experiment results, snapshots and logs; environments remain excluded.
+!*.json
+!*.pickle
+!*.pkl
+!*.log
+!cs336_systems/var/
+!cs336_systems/var/**
+
+# Never include runtime environments, interpreter caches or local credentials.
+.venv/
+venv/
+env/
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+.env.*

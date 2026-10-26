@@ -1,0 +1,11 @@
+2.9.1+cu128 NVIDIA GeForce RTX 3090
+工作目录: /home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems
+memory history接口: (enabled: Optional[str] = 'all', context: Optional[str] = 'all', stacks: str = 'all', max_entries: int = 9223372036854775807, device: 'Device' = None, clear_history: bool = False, compile_context: bool = False, global_record_annotations: bool = False)
+配置: large_ctx512_inference_fp32_batch1
+快照路径: /home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_snapshots_assignment4/large_ctx512_inference_fp32_batch1.pickle
+加载完成，已分配MiB: 3806.1455078125
+[W1026 00:13:12.161475174 unwind.cpp:219] Warning: Unsupported unwinding pattern: unknown op code 0x8 (function unwinderFor)
+{'configuration': 'large_ctx512_train_fp32_batch1', 'baseline_MiB': 11426.4208984375, 'peak_allocated_MiB': 15829.8984375, 'peak_reserved_MiB': 17728.0, 'extra_above_baseline_MiB': 4403.4775390625, 'snapshot': '/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_snapshots_assignment4/large_ctx512_train_fp32_batch1.pickle', 'stage_end_memory': {'after_forward_MiB': 15684.8134765625, 'after_backward_MiB': 15247.18408203125, 'after_optimizer_MiB': 15245.18408203125}}
+/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/run_memory_large_ad.py:124: FutureWarning: device argument is deprecated, plots now contain all device
+  html = trace_plot(snapshot, device=0)
+RESULT_JSON {"configuration": "large_ctx512_train_fp32_batch1", "baseline_MiB": 11426.4208984375, "peak_allocated_MiB": 15829.8984375, "peak_reserved_MiB": 17728.0, "extra_above_baseline_MiB": 4403.4775390625, "snapshot": "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_snapshots_assignment4/large_ctx512_train_fp32_batch1.pickle", "stage_end_memory": {"after_forward_MiB": 15684.8134765625, "after_backward_MiB": 15247.18408203125, "after_optimizer_MiB": 15245.18408203125}, "mode": "train", "size": "large", "context": 512, "batch": 1, "parameter_dtype": "float32", "replacement_for": "2.7B", "residual_activation_MiB": 2.5}

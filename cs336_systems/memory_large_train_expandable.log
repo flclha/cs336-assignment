@@ -1,0 +1,47 @@
+2.9.1+cu128 NVIDIA GeForce RTX 3090
+工作目录: /home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems
+memory history接口: (enabled: Optional[str] = 'all', context: Optional[str] = 'all', stacks: str = 'all', max_entries: int = 9223372036854775807, device: 'Device' = None, clear_history: bool = False, compile_context: bool = False, global_record_annotations: bool = False)
+配置: large_ctx512_inference_fp32
+快照路径: /home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/memory_snapshots_assignment4/large_ctx512_inference_fp32.pickle
+加载完成，已分配MiB: 3698.1689453125
+OOM warmup_or_measurement CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 83.88 MiB is free. Process 1903 has 260.00 MiB memory in use. Including non-PyTorch memory, this process has 22.78 GiB memory in use. Of the allocated memory 22.24 GiB is allocated by PyTorch, and 232.43 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/run_memory_large_ad.py", line 147, in <module>
+    main()
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/cs336_systems/run_memory_large_ad.py", line 114, in main
+    result = namespace["memory_profile"](namespace["description"], namespace["run_model"], namespace["NUM_WARMUPS"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 16, in memory_profile
+  File "<string>", line 12, in run_model
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/src/cs336_basics/model.py", line 247, in forward
+    x = layer(x)
+        ^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/src/cs336_basics/model.py", line 380, in forward
+    x_attn = self.attn(self.ln1(x))
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/src/cs336_basics/model.py", line 515, in forward
+    attn_output = scaled_dot_product_attention(K=K, Q=Q, V=V, mask=causal_mask)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/src/cs336_basics/model.py", line 425, in scaled_dot_product_attention
+    attention_scores = einsum(Q, K, "... query d_k, ... key d_k -> ... query key") / math.sqrt(d_k)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 80.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 83.88 MiB is free. Process 1903 has 260.00 MiB memory in use. Including non-PyTorch memory, this process has 22.78 GiB memory in use. Of the allocated memory 22.24 GiB is allocated by PyTorch, and 232.43 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[W1026 00:10:52.628923389 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

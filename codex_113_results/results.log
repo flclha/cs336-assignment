@@ -1,0 +1,55 @@
+RUN size=small warmups=5
+SETTINGS {"size": "small", "warmups": 5, "trials": 10, "context_length": 128, "batch_size": 4, "vocab_size": 10000, "seed": 42, "dtype": "float32", "tf32": false, "gpu": "NVIDIA GeForce RTX 3090", "python": "3.12.15", "torch": "2.9.1+cu128", "cuda": "12.8", "config": {"d_model": 768, "d_ff": 3072, "num_layers": 12, "num_heads": 12}}
+Traceback (most recent call last):
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/codex_113_results/run_113_experiments.py", line 92, in <module>
+    main()
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/codex_113_results/run_113_experiments.py", line 75, in main
+    worker(args.size, args.warmups)
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/codex_113_results/run_113_experiments.py", line 35, in worker
+    rope_theta=10000.0, **CONFIGS[size]).to(
+                                         ^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1371, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1357, in convert
+    return t.to(
+           ^^^^^
+torch.AcceleratorError: CUDA error: out of memory
+Search for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+RUN_FAILED {"size": "small", "warmups": 5, "returncode": 1}
+RUN size=small warmups=0
+SETTINGS {"size": "small", "warmups": 0, "trials": 10, "context_length": 128, "batch_size": 4, "vocab_size": 10000, "seed": 42, "dtype": "float32", "tf32": false, "gpu": "NVIDIA GeForce RTX 3090", "python": "3.12.15", "torch": "2.9.1+cu128", "cuda": "12.8", "config": {"d_model": 768, "d_ff": 3072, "num_layers": 12, "num_heads": 12}}
+Traceback (most recent call last):
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/codex_113_results/run_113_experiments.py", line 92, in <module>
+    main()
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/codex_113_results/run_113_experiments.py", line 75, in main
+    worker(args.size, args.warmups)
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/codex_113_results/run_113_experiments.py", line 35, in worker
+    rope_theta=10000.0, **CONFIGS[size]).to(
+                                         ^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1371, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/bygpu/projects/diy-llm/coursework/assignment2-systems/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1357, in convert
+    return t.to(
+           ^^^^^
+torch.AcceleratorError: CUDA error: out of memory
+Search for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
